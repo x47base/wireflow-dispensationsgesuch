@@ -6,86 +6,90 @@
     
     <!-- Stylesheet Bindings -->
     <link href="./output.css" rel="stylesheet">
-
+    
     <!-- Scripts -->
     <script src="./main.js"></script>
+
+    <title>Dispensationsgesuch Formular</title>
 	</head>
 	<body>
-    <form id="formular" class="Dispenzformular" style="width: 1020px; height: 1240px; position: relative; background: white">
-      <span class="Titel" style="width: 452px; height: 68px; left: 64px; top: 37px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 900; word-wrap: break-word">Dispensationsgesuch</span>
-      <a href="https://www.bzz.ch/wp-content/uploads/2016/08/Disziplinarreglement-Berufsbildung-2015.pdf" target="_blank" style="text-align:left;width: fit; height: 31px; left: 64px; top: 102px; position: absolute; color: #1E3A8A; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Disziplinarreglement Berufsbildung→</a>
-      
-      <p class="Anrede" style="width: 150px; height: 22px; left: 64px; top: 164px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Anrede:</p>
-      <select name="anrede" required id="Anrede" style="padding: 4px; width: 150px; height: 30px; left: 214px; top: 160px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-        <option value="" disabled selected>Bitte auswählen</option>
-        <option value="masculin">Herr</option>
-        <option value="feminin">Frau</option>
-      </select>
-
-      <span class="Vorname" style="width: 150px; height: 22px; left: 64px; top: 218px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Vorname:</span>
-      <input name="vorname" type="text" required style="padding: 4px; width: 268px; height: 30px; left: 214px; top: 214px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-      
-      <span class="Nachname" style="width: 150px; height: 22px; left: 534px; top: 218px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Nachname:</span>
-      <input name="nachname" type="text" required style="padding:4px;width: 268px; height: 30px; left: 684px; top: 214px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-      
-      <span class="EMail" style="width: 150px; height: 22px; left: 64px; top: 272px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">E-Mail:</span>
-      <input name="email" type="email" placeholder="beispiel@bzz.ch" required style="padding: 4px; width: 320px; height: 30px; left: 214px; top: 268px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-
-      <span class="Telefon" style="width: 128px; height: 22px; left: 556px; top: 272px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Telefon:</span>
-      <input name="phone" type="tel" placeholder="000 000 00 00" required style="padding:4px;width: 268px; height: 30px; left: 684px; top: 268px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-
-
-      <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 329px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
-      <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 472px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
-      <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 810px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
-
-      <span class="Klasse" style="width: 150px; height: 22px; left: 66px; top: 362px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Klasse:</span>
-      <select name="klasse" required id="Klasse" style="padding: 4px; width: 268px; height: 30px; left: 216px; top: 358px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-        <option value="" disabled selected>Bitte auswählen</option>
-        <option value="IM22a">IM22a</option>
-        <option value="IM22b">IM22b</option>
-      </select>
-
-      <span class="Standort" style="width: 150px; height: 22px; left: 536px; top: 362px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Standort:</span>
-      <select name="standort" required id="Standort" style="padding: 4px; width: 268px; height: 30px; left: 686px; top: 358px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-        <option value="" disabled selected>Bitte auswählen</option>
-        <option value="horgen">Horgen</option>
-        <option value="staefa">Stäfa</option>
-      </select>
-
-      <span class="Lehrberuf" style="width: 150px; height: 22px; left: 66px; top: 416px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lehrberuf:</span>
-      <select name="lehrberuf" required id="Lehrberuf" style="padding: 4px; width: 268px; height: 30px; left: 216px; top: 412px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-        <option value="" disabled selected>Bitte auswählen</option>
-        <option value="detailhandelslehre">Detailhandelslehre</option>
-        <option value="elektroberufe">Elektroberufe</option>
-        <option value="fachangestellte-betreuung">Fachangestellte Betreuung</option>
-        <option value="informatikberufe">Informatikberufe</option>
-        <option value="kv-oder-büro-lehre">KV- oder Bürde-Lehre</option>
-        <option value="mediamatikberufe">Mediamatikberufe</option>
-      </select>
-
-      <span class="AbwesenheitVon" style="width: 268px; height: 22px; left: 66px; top: 506px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Abwesenheit von:</span>
-      <input id="datepicker" name="abwesenheit-von" type="date" required style="width: 150px; height: 30px; left: 334px; top: 502px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-      <span class="AbwesenheitBis" style="width: 268px; height: 22px; left: 536px; top: 506px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Abwesenheit bis:</span>
-      <input id="datepicker" name="abwesenheit-bis" type="date" required style="width: 150px; height: 30px; left: 804px; top: 502px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-      
-      <span class="GrundDerAbwesentheit" style="width: 150px; height: 22px; left: 66px; top: 560px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Grund der Abwesentheit:</span>
-      <textarea name="begründung" placeholder="Hier ausfüllen..." required style="resize:none; padding: 4px; vertical-align: text-top; width: 738px; height: 100px; left: 216px; top: 556px; position: absolute; background: rgba(217, 217, 217, 0.60)"></textarea>
-      
-      <div style="display:flex;align-items:center;justify-content:center;width: 737px; height: 100px; left: 217px; top: 680px; position: absolute; background-color: rgba(217, 217, 217, 0.60)">
-        <input multiple="multiple" class="fileupload-input" id="input_10" type="file" name="file" aria-labelledby="label_10" aria-hidden="true" tabindex="-1" class="Hochladen" style="width: 737px; height: 100px; text-align: center;vertical-align: middle;">
-      </div>
-
-      <span class="IchBestTigeDassDieFolgendenVoraussetzungenFRsEinreichenDesGesuchsErfLltSind" style="width: 888px; left: 63px; top: 964px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Ich bestätige, dass die folgenden Voraussetzungen fürs Einreichen des Gesuchs erfüllt sind:</span>
-      <span class="DerLehrbetriebIstInformiertUndIstEinverstanden" style="width: 845px; height: 22px; left: 103px; top: 999px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Der Lehrbetrieb ist informiert und ist einverstanden.</span>
-      <span class="BeiMinderjHrigenInhaberDerElterlichenSorgeSindInformiertUndEinverstanden" style="width: 845px; height: 22px; left: 103px; top: 1039px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bei Minderjährigen: Inhaber der elterlichen Sorge sind informiert und einverstanden.</span>
-      <input type="checkbox" name="bestaetigung-lehrbetrieb" required style="width: 30px; height: 30px; left: 63px; top: 995px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-      <input type="checkbox" name="minderjaehrig-eltern-informiert" style="width: 30px; height: 30px; left: 63px; top: 1035px; position: absolute; background: rgba(217, 217, 217, 0.60)">
-
-      <span class="BemerkungenMitteilungen" style="width: 150px; height: 22px; left: 63px; top: 844px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bemerkungen / Mitteilungen</span>
-      <textarea placeholder="Hier ausfüllen..." style="resize:none; padding: 4px; vertical-align: text-top; width: 737px; height: 100px; left: 213px; top: 840px; position: absolute; background: rgba(217, 217, 217, 0.60)"></textarea>
-      
-      <button type="submit" style="width: 180px; height: 35px; left: 774px; top: 1128px; position: absolute; background: rgba(217, 217, 217, 0.60)">Absenden</button>
-    </form>
+    <main>
+      <form id="formular" class="Dispenzformular" style="width: 1020px; height: 1240px; position: relative; background: white">
+        <span class="Titel" style="width: 452px; height: 68px; left: 64px; top: 37px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 900; word-wrap: break-word">Dispensationsgesuch</span>
+        <a href="https://www.bzz.ch/wp-content/uploads/2016/08/Disziplinarreglement-Berufsbildung-2015.pdf" target="_blank" style="text-align:left;width: fit; height: 31px; left: 64px; top: 102px; position: absolute; color: #1E3A8A; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Disziplinarreglement Berufsbildung→</a>
+        
+        <p class="Anrede" style="width: 150px; height: 22px; left: 64px; top: 164px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Anrede:</p>
+        <select name="anrede" required id="Anrede" style="padding: 4px; width: 150px; height: 30px; left: 214px; top: 160px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+          <option value="" disabled selected>Bitte auswählen</option>
+          <option value="masculin">Herr</option>
+          <option value="feminin">Frau</option>
+        </select>
+  
+        <span class="Vorname" style="width: 150px; height: 22px; left: 64px; top: 218px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Vorname:</span>
+        <input name="vorname" type="text" required style="padding: 4px; width: 268px; height: 30px; left: 214px; top: 214px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+        
+        <span class="Nachname" style="width: 150px; height: 22px; left: 534px; top: 218px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Nachname:</span>
+        <input name="nachname" type="text" required style="padding:4px;width: 268px; height: 30px; left: 684px; top: 214px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+        
+        <span class="EMail" style="width: 150px; height: 22px; left: 64px; top: 272px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">E-Mail:</span>
+        <input id="email-value" name="email" type="email" placeholder="beispiel@bzz.ch" required style="padding: 4px; width: 320px; height: 30px; left: 214px; top: 268px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+  
+        <span class="Telefon" style="width: 128px; height: 22px; left: 556px; top: 272px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Telefon:</span>
+        <input name="phone" type="tel" placeholder="000 000 00 00" required style="padding:4px;width: 268px; height: 30px; left: 684px; top: 268px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+  
+  
+        <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 329px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
+        <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 472px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
+        <div class="LINE" style="width: 888px; height: 2px; left: 63px; top: 810px; position: absolute; background: rgba(217, 217, 217, 0.60)"></div>
+  
+        <span class="Klasse" style="width: 150px; height: 22px; left: 66px; top: 362px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Klasse:</span>
+        <select name="klasse" required id="Klasse" style="padding: 4px; width: 268px; height: 30px; left: 216px; top: 358px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+          <option value="" disabled selected>Bitte auswählen</option>
+          <option value="IM22a">IM22a</option>
+          <option value="IM22b">IM22b</option>
+        </select>
+  
+        <span class="Standort" style="width: 150px; height: 22px; left: 536px; top: 362px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Standort:</span>
+        <select name="standort" required id="Standort" style="padding: 4px; width: 268px; height: 30px; left: 686px; top: 358px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+          <option value="" disabled selected>Bitte auswählen</option>
+          <option value="horgen">Horgen</option>
+          <option value="staefa">Stäfa</option>
+        </select>
+  
+        <span class="Lehrberuf" style="width: 150px; height: 22px; left: 66px; top: 416px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Lehrberuf:</span>
+        <select name="lehrberuf" required id="Lehrberuf" style="padding: 4px; width: 268px; height: 30px; left: 216px; top: 412px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+          <option value="" disabled selected>Bitte auswählen</option>
+          <option value="detailhandelslehre">Detailhandelslehre</option>
+          <option value="elektroberufe">Elektroberufe</option>
+          <option value="fachangestellte-betreuung">Fachangestellte Betreuung</option>
+          <option value="informatikberufe">Informatikberufe</option>
+          <option value="kv-oder-büro-lehre">KV- oder Bürde-Lehre</option>
+          <option value="mediamatikberufe">Mediamatikberufe</option>
+        </select>
+  
+        <span class="AbwesenheitVon" style="width: 268px; height: 22px; left: 66px; top: 506px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Abwesenheit von:</span>
+        <input id="datepicker1" name="abwesenheit-von" type="date" required style="width: 150px; height: 30px; left: 334px; top: 502px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+        <span class="AbwesenheitBis" style="width: 268px; height: 22px; left: 536px; top: 506px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Abwesenheit bis:</span>
+        <input id="datepicker2" name="abwesenheit-bis" type="date" required style="width: 150px; height: 30px; left: 804px; top: 502px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+        
+        <span class="GrundDerAbwesentheit" style="width: 150px; height: 22px; left: 66px; top: 560px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Grund der Abwesentheit:</span>
+        <textarea name="begründung" placeholder="Hier ausfüllen..." required style="resize:none; padding: 4px; vertical-align: text-top; width: 738px; height: 100px; left: 216px; top: 556px; position: absolute; background: rgba(217, 217, 217, 0.60)"></textarea>
+        
+        <div style="display:flex;align-items:center;justify-content:center;width: 737px; height: 100px; left: 217px; top: 680px; position: absolute; background-color: rgba(217, 217, 217, 0.60)">
+          <input multiple="multiple" class="fileupload-input" id="input_10" type="file" name="file" aria-labelledby="label_10" aria-hidden="true" tabindex="-1" class="Hochladen" style="width: 737px; height: 100px; text-align: center;vertical-align: middle;">
+        </div>
+  
+        <span class="IchBestTigeDassDieFolgendenVoraussetzungenFRsEinreichenDesGesuchsErfLltSind" style="width: 888px; left: 63px; top: 964px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Ich bestätige, dass die folgenden Voraussetzungen fürs Einreichen des Gesuchs erfüllt sind:</span>
+        <span class="DerLehrbetriebIstInformiertUndIstEinverstanden" style="width: 845px; height: 22px; left: 103px; top: 999px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Der Lehrbetrieb ist informiert und ist einverstanden.</span>
+        <span class="BeiMinderjHrigenInhaberDerElterlichenSorgeSindInformiertUndEinverstanden" style="width: 845px; height: 22px; left: 103px; top: 1039px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bei Minderjährigen: Inhaber der elterlichen Sorge sind informiert und einverstanden.</span>
+        <input type="checkbox" name="bestaetigung-lehrbetrieb" required style="width: 30px; height: 30px; left: 63px; top: 995px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+        <input type="checkbox" name="minderjaehrig-eltern-informiert" style="width: 30px; height: 30px; left: 63px; top: 1035px; position: absolute; background: rgba(217, 217, 217, 0.60)">
+  
+        <span class="BemerkungenMitteilungen" style="width: 150px; height: 22px; left: 63px; top: 844px; position: absolute; color: black; font-size: 18px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bemerkungen / Mitteilungen</span>
+        <textarea placeholder="Hier ausfüllen..." style="resize:none; padding: 4px; vertical-align: text-top; width: 737px; height: 100px; left: 213px; top: 840px; position: absolute; background: rgba(217, 217, 217, 0.60)"></textarea>
+        
+        <button type="submit" style="width: 180px; height: 35px; left: 774px; top: 1128px; position: absolute; background: rgba(217, 217, 217, 0.60)">Absenden</button>
+      </form>
+    </main>
 	</body>
 </html>
