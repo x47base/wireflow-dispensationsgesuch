@@ -59,16 +59,20 @@ document.addEventListener("DOMContentLoaded", (domevent) => {
         let date2 = new Date(datepicker2.value).getTime();
         if (date1 > date2){
             datepicker1.style.color = "red";
+            datepicker2.style.color = "red";
         } else {
             datepicker1.style.color = "black";
+            datepicker2.style.color = "black";
         }
     })
     datepicker2.addEventListener('change', (event) => {
         let date1 = new Date(datepicker1.value).getTime();
         let date2 = new Date(datepicker2.value).getTime();
         if (date1 > date2){
+            datepicker1.style.color = "red";
             datepicker2.style.color = "red";
         } else {
+            datepicker1.style.color = "black";
             datepicker2.style.color = "black";
         }
     })
