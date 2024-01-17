@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", (domevent) => {
 
         let date1 = new Date(datepicker1.value).getTime();
         let date2 = new Date(datepicker2.value).getTime();
+        let currentDate = new Date().getTime();
         let goodToSend = true;
         let invalidEmail = false;
         let invalidDate = false;
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", (domevent) => {
             email.style.color = "red";
             goodToSend = false;
             invalidEmail = true;
+        } else if (date1 < currentDate || date2 < currentDate) {
+            goodToSend = false;
+            invalidDate = true;
         } else {
             email.style.color = "black";
             goodToSend = true;
@@ -26,6 +30,9 @@ document.addEventListener("DOMContentLoaded", (domevent) => {
         if (date1 <= date2){
             goodToSend = true;
             invalidDate = false;
+        } else if (date1 < currentDate || date2 < currentDate) {
+            goodToSend = false;
+            invalidDate = true;
         } else {
             goodToSend = false;
             invalidDate = true;
@@ -57,13 +64,19 @@ document.addEventListener("DOMContentLoaded", (domevent) => {
     datepicker1.addEventListener('change', (event) => {
         let date1 = new Date(datepicker1.value).getTime();
         let date2 = new Date(datepicker2.value).getTime();
+        let currentDate = new Date().getTime();
+        console.log(currentDate);
         if (date1 > date2){
+            datepicker1.style.color = "red";
+            datepicker2.style.color = "red";
+        } else if (date1 < currentDate || date2 < currentDate) {
             datepicker1.style.color = "red";
             datepicker2.style.color = "red";
         } else {
             datepicker1.style.color = "black";
             datepicker2.style.color = "black";
         }
+
     })
     datepicker2.addEventListener('change', (event) => {
         let date1 = new Date(datepicker1.value).getTime();
