@@ -1,3 +1,9 @@
-p {
-    font-family: "Gill Sans", sans-serif;
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('path/to/source-sans-pro.woff2') format('woff2'),
+          url('path/to/source-sans-pro.woff') format('woff');
+}
+
+span {
+    font-family: "Source Sans Pro", sans-serif;
 }
